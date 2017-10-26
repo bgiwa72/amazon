@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170808 23:10:34.341" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="c:\development\robot-scripts\amazon\Tests\Amazon2.robot" id="s1" name="Amazon2">
+<test id="s1-t1" name="User must sign in to check out">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.amazon.com</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170808 23:10:35.218" level="INFO">Opening browser 'ff' to base url 'http://www.amazon.com'</msg>
+<status status="PASS" endtime="20170808 23:11:17.377" starttime="20170808 23:10:35.217"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Your Amazon.com</arg>
+</arguments>
+<status status="PASS" endtime="20170808 23:11:17.766" starttime="20170808 23:11:17.538"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=twotabsearchtextbox</arg>
+<arg>Ferrari 458</arg>
+</arguments>
+<msg timestamp="20170808 23:11:17.960" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20170808 23:11:19.050" starttime="20170808 23:11:17.958"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="nav-search"]/form/div[2]/div/input</arg>
+</arguments>
+<msg timestamp="20170808 23:11:19.108" level="INFO">Clicking button 'xpath=//*[@id="nav-search"]/form/div[2]/div/input'.</msg>
+<status status="PASS" endtime="20170808 23:11:25.613" starttime="20170808 23:11:19.107"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>results for Toys &amp; Games :</arg>
+</arguments>
+<status status="PASS" endtime="20170808 23:11:25.759" starttime="20170808 23:11:25.679"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=#result_0 a.s-access-detail-page</arg>
+</arguments>
+<msg timestamp="20170808 23:11:25.779" level="INFO">Clicking link 'css=#result_0 a.s-access-detail-page'.</msg>
+<status status="PASS" endtime="20170808 23:11:34.559" starttime="20170808 23:11:25.778"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Back to search results</arg>
+</arguments>
+<status status="PASS" endtime="20170808 23:11:34.805" starttime="20170808 23:11:34.640"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>id=add-to-cart-button</arg>
+</arguments>
+<msg timestamp="20170808 23:11:34.823" level="INFO">Clicking button 'id=add-to-cart-button'.</msg>
+<status status="PASS" endtime="20170808 23:11:41.063" starttime="20170808 23:11:34.822"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Added to Cart</arg>
+</arguments>
+<status status="PASS" endtime="20170808 23:11:41.420" starttime="20170808 23:11:41.069"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>Proceed to checkout (1 item)</arg>
+</arguments>
+<msg timestamp="20170808 23:11:41.483" level="INFO">Clicking link 'Proceed to checkout (1 item)'.</msg>
+<status status="PASS" endtime="20170808 23:11:49.988" starttime="20170808 23:11:41.480"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Sign In</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170808 23:11:58.984" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170808 23:11:58.984" starttime="20170808 23:11:55.951"></status>
+</kw>
+<msg timestamp="20170808 23:11:59.088" level="FAIL">Text 'Sign In' did not appear in 5 seconds</msg>
+<status status="FAIL" endtime="20170808 23:11:59.088" starttime="20170808 23:11:50.024"></status>
+</kw>
+<doc>This is some basic info about test</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="FAIL" endtime="20170808 23:11:59.101" critical="yes" starttime="20170808 23:10:35.196">Text 'Sign In' did not appear in 5 seconds</status>
+</test>
+<doc>Basic browser test case</doc>
+<status status="FAIL" endtime="20170808 23:11:59.306" starttime="20170808 23:10:34.356"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">Smoke</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Amazon2" pass="0">Amazon2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
